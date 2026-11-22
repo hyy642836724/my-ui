@@ -83,10 +83,10 @@ npx shadcn@latest build
 ## 构建与发布
 
 ```bash
-npx shadcn@latest build     # 读 registry.json，产物输出到 public/r/
+npx shadcn@latest build --output docs/r     # 读 registry.json，产物输出到 docs/r/
 ```
 
-产物必须提交到仓库（GitHub Pages 直接托管 `public/`）。
+产物必须提交到仓库。**注意目录名必须是 `docs`**：GitHub Pages 的发布目录只支持 `/` 或 `/docs`，不认 `public`。
 
 验证：
 
@@ -98,8 +98,10 @@ curl -s https://<你的名字>.github.io/my-ui/r/registry.json | head -c 200
 
 1. 推到 GitHub
 2. 仓库 Settings → Pages → Source 选 `Deploy from a branch`
-3. Branch 选 `main`，目录选 `/public`
+3. Branch 选 `main`，目录选 `/docs`
 4. 等 1 分钟左右，访问 `https://<你的名字>.github.io/my-ui/r/registry.json`
+
+本库已部署：<https://hyy642836724.github.io/my-ui/r/registry.json>
 
 ## 约定
 

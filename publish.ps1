@@ -77,7 +77,7 @@ try {
     $guide = @(
         '  1. 打开 https://github.com/' + $User + '/' + $RepoName + '/settings/pages'
         '  2. Source 选 "Deploy from a branch"'
-        '  3. Branch 选 main，目录选 /public，点 Save'
+        '  3. Branch 选 main，目录选 /docs（GitHub Pages 只支持 / 和 /docs），点 Save'
         '  4. 等 1 分钟，然后验证：'
         '       curl -s ' + $pagesBase + '/registry.json'
         ''
